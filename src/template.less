@@ -1,3 +1,4 @@
+@import "global.less";
 *{
     box-sizing: border-box;
     padding: 0;
@@ -9,8 +10,19 @@ html{
 body{
     font-family: 'Poppins', sans-serif;
 }
-
+a{
+    text-decoration: none;
+    color: @white;
+}
 .background-menu{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.6;
+    z-index: 1;
+    position: absolute;
+}
+.background-menu-location{
     width: 100%;
     height: 100%;
     background-color: black;
@@ -64,6 +76,7 @@ body{
                     &_header{
                         background-color: @color-principal;
                         color: @white;
+                        height: 128px;
                         &-account{
                             font-size: 1.4rem;
                             display: flex;
@@ -73,6 +86,8 @@ body{
                             padding: 15px;
                         }
                         &-explore{
+                            position: absolute;
+                            top: 65px;
                             div{
                                 font-size: 2rem;
                                 font-weight: 700;
@@ -259,10 +274,146 @@ body{
             align-items: center;
             &-account{
                 margin: 10px;
+                display: flex;
+                align-items: center;
+                div{
+                    display: none;
+                    width: 0 auto;
+                    height: 0 auto;
+                    text-transform: uppercase;
+                    font-size: 1.4rem;
+                    img{
+                        width: 7px;
+                        height: 7px;
+                        align-self: center;
+                        margin: 3px;
+                    }
+                }
                 img{
                     height: 35px;
-                 }
+                }
+                &--Active{
+                    box-sizing: border-box;
+                    background-color: @white;
+                    position: fixed;
+                    color: black;
+                    z-index: 2;
+                    right: 0;
+                    top: 0;
+                    width: 80%;
+                    height: 100%;
+                    overflow: auto;
+                    &_close{
+                        z-index: 3;
+                        position: fixed;
+                        left: 20px;
+                        top: 30px;
+                        width: 20px;
+                        height: 20px;
+                    }
+                    &_header{
+                        background-color: @color-principal;
+                        color: @white;
+                        height: 128px;
+                        &-explore{
+                            font-size: 1.4rem;
+                            display: flex;
+                            width: 100%;
+                            justify-content: end;
+                            align-items: center;
+                            padding: 15px;
+                            img{
+                                height: 22px;
+                                margin: 5px;
+                            }
+                        }
+                        &-account{
+                            padding: 20px;
+                            position: absolute;
+                            top: 55px;
+                            h2{
+                                font-size: 20px;
+                                line-height: 20px;
+                            }
+                            p{
+                                font-size: 2.8rem;
+                                line-height: 28px;
+                            }
+                        }
+                    }
+                    &_Orders{
+                        border-bottom: 5px solid lightgray;
+                        display: flex;
+                        flex-direction: column;
+                        .title{
+                            display: flex;
+                            justify-content: space-between;
+                            padding: 15px;
+                            
+                            h2{
+                                font-size: 19px;
+                            }
+                            div{
+                                text-align: center;
+                                padding: 2px 3px 0 3px;
+                                border-radius: 5px;
+                                font-size: 1.4rem;
+                                border: 1px solid @color-light;
+                                color: @color-light;
+                            }
+                        }
+                        .menu{
+                            text-align: left;
+                            font-size: 1.6rem;
+                            p{
+                                padding: 15px 20px 15px 20px;
+                            }
+                            div{
+                                align-self: center;
+                                margin: 0 20px;
+                                padding-top: 20px;
+                                padding-bottom: 20px;
+                                border-top: 1px solid @color-light;
+                            }
+                        }
+                    }
+                    &_myAccount{
+                        border-bottom: 5px solid lightgray;
+                        display: flex;
+                        flex-direction: column;
+                        padding-bottom: 10px;
+                        .title{
+                            display: flex;
+                            justify-content: space-between;
+                            padding: 15px;
+                            
+                            h2{
+                                font-size: 19px;
+                            }
+                            div{
+                                text-align: center;
+                                padding: 2px 3px 0 3px;
+                                border-radius: 5px;
+                                font-size: 1.4rem;
+                                border: 1px solid @color-light;
+                                color: @color-light;
+                            }
+                        }
+                        .menu{
+                            text-align: left;
+                            font-size: 1.6rem;
+                            p{
+                                padding: 15px 20px 15px 20px;
+                            }
+                        }
+                    }
+                    &_singOut{
+                        font-size: 1.6rem;
+                        padding: 15px 20px 50px 20px;
+                    }
+                }
             }
+
             &-shoppingCart{
                 position: relative;
                 margin: 0 20px 0 5px;
@@ -284,13 +435,13 @@ body{
         display: flex;
         justify-content: center;
         &-input{
-            width: 100%;
+            width: 90%;
             display: flex;
             justify-content: center;
             position: relative;
             input{
                 display: block;
-                width: 90%;
+                width: 100%;
                 height: 44px;
                 border: none;
                 border-radius: 10px;
@@ -300,7 +451,7 @@ body{
                 width: auto;
                 height: auto;
                 position: absolute;
-                right: 15px;
+                right: 0px;
                 background-color: @contrast-color;
                 padding: 5px 12px 5px 12px;
                 border-radius: 10px;
@@ -342,6 +493,277 @@ body{
             line-height: 20px;
         }
     }
+    .navbar_address-Active{
+        height: 50%;
+        width: 100%;
+        position: fixed;
+        z-index: 2;
+        bottom: 0;
+        background-color: @white;
+        color: black;
+        font-size: 1.3rem;
+        .text{
+            max-width: 80%;
+            text-align: left;
+            padding: 20px 0 10px 20px;
+            line-height: 14px;
+            h2{
+                font-size: 1.8rem;
+                line-height: 20px;
+            }
+            p{
+                font-weight: 300;
+            }
+        }
+        .options{
+            display: flex;
+            overflow: auto;
+            padding: 10px;
+            font-size: 1rem;
+            .optionContainer{
+                padding: 5px;
+                display: flex;
+                flex-direction: column;
+                margin: 5px;
+                border: 1px solid black;
+                height: 125px;
+                border-radius: 10px;
+                .name{
+                    font-weight: 700;
+                    font-size: 1.1rem;
+                }
+                .address{
+                    width: 110px;
+                }
+                .mod{
+                    width: 110px;
+                    color: rgb(25, 157, 210);
+                    padding: 30px 10px 0 10px;
+                    text-align: center;
+                    font-weight: 700;
+                }
+            }
+            .optionContainer:hover{
+                background-color: rgba(0, 255, 242, 0.092);
+                border: 5px solid rgb(21, 100, 132);
+                cursor: pointer;
+            }
+        }
+        .introducePostalCode{
+            display: flex;
+            color: rgb(25, 157, 210);
+            justify-content: center;
+            align-items: center;
+            border-top: 1px solid lightgray;
+            padding: 20px;
+            img{
+                width: 20px;
+                margin-right: 5px;
+            }
+        }
+    }
+}
+.navbar-desktop{
+    display: none;
+    &_principal{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        background-color: @color-dark;
+        color: @white;
+        padding: 5px 10px 0 10px;
+        img{
+            width: 20px;
+        }
+        &-logo{
+            display: flex;
+            padding: 10px;
+            width: 0 auto;
+            height: auto;
+            img{
+                width: 100px;
+                height: 30px;
+            }
+            p{
+                position: relative;
+                top: 2.5px;
+                right: -2px;
+                font-size: 1.2rem;
+            }
+        }
+        &-address{
+            display: flex;
+            padding: 10px;
+            font-size: 1.2rem;
+            width: auto;
+            height: auto;
+            align-items: center;
+            img{
+                height: 20px;
+                width: 20%;
+                margin: 5px;
+            }
+            p{
+                line-height: 14px;
+            }
+            p:last-child{
+                font-weight: 700;
+            }
+        }
+        &-search{
+            width: 45%;
+            margin: 10px;
+            display: flex;
+            position: relative;
+            input{
+                width: 100%;
+                height: 40px;
+                align-self: center;
+                border: none;
+                border-radius: 5px;
+                padding-left: 15px;
+            }
+            img{
+                position: absolute;
+                background-color: @contrast-color;
+                width: 50px;
+                height: 40px;
+                right: 0;
+                align-self: center;
+                padding: 7px;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+        }
+        &-account{
+            font-size: 1.3rem;
+            line-height: 13px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 10px;
+            div{
+                p{
+                    font-weight: 700;
+                }
+                display: flex;
+                img{
+                    width: 7px;
+                    height: 7px;
+                    margin-left: 5px;
+                    margin-top: 2px;
+                    opacity: 0.7;
+                }
+            }
+        }
+        &-orders{
+            font-size: 1.3rem;
+            line-height: 13px;
+            padding: 10px;
+            p:last-child{
+                font-weight: 700;
+            }
+        }
+        &-cart{
+            position: relative;
+            display: flex;
+            align-items: baseline;
+            padding: 10px;
+            div{
+                position: absolute;
+                top: 0px;
+                right: 71px;
+                color: @contrast-color;
+                font-size: 2rem;
+            }
+            img{
+               width: 35px;
+               height: 30px;
+            }
+            p{
+                font-weight: 700;
+                font-size: 1.5rem;
+            }
+        }
+        .navbar-desktop_principal-logo:hover{
+            border-radius: 5px;
+            border: 1px solid @white;
+        }
+        .navbar-desktop_principal-address:hover{
+            border-radius: 5px;
+            border: 1px solid @white;
+        }
+        .navbar-desktop_principal-account:hover{
+            border-radius: 5px;
+            border: 1px solid @white;
+        }
+        .navbar-desktop_principal-orders:hover{
+            border-radius: 5px;
+            border: 1px solid @white;
+        }
+        .navbar-desktop_principal-cart:hover{
+            border-radius: 5px;
+            border: 1px solid @white;
+        }
+    }
+    &_menu{
+        background-color: @color-principal;
+        color: @white;
+        display: flex;
+        font-size: 1.4rem;
+        padding: 5px;
+        img{
+            width: 7px;
+            height: 7px;
+            margin-left: 5px;
+            margin-top: 2px;
+            opacity: 0.7;
+        }
+        &-btnAll{
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+            padding: 5px;
+            img{
+                width: 20px;
+                height: 20px;
+                margin: 5px;
+            }
+        }
+        &-btnAll:hover{
+            border-radius: 5px;
+            border: 1px solid @white;
+        }
+        &-sections{
+            display: flex;
+            a{
+                padding: 10px;
+            }
+            .prime{
+                display: flex;
+                align-items: center;
+                padding: 10px;
+            }
+            .historial{
+                display: flex;
+                align-items: center;
+                padding: 10px;
+            }
+            a:hover{
+                border-radius: 5px;
+                border: 1px solid @white;
+            }
+            .prime:hover{
+                border-radius: 5px;
+                border: 1px solid @white;
+            }
+            .historial:hover{
+                border-radius: 5px;
+                border: 1px solid @white;
+            }
+        }
+    }
 }
 .footer{
     background-color: @color-dark;
@@ -376,11 +798,40 @@ body{
             margin-top: 10px;
         }
     }
+    .footer_seccionsContainer-desktop{
+        display: none;
+        background-color: @color-principal;
+        width: 100%;
+        justify-content: space-between;
+        padding: 50px 35px;
+        align-items: top;
+        font-size: 1.4rem;
+        border-bottom: 1px solid rgba(211, 211, 211, 0.304);
+        .footer_seccion-desktop{
+            text-align: start;
+            margin: 0 30px 0 30px;
+            .title{
+                font-weight: 700;
+                padding: 10px 10px 10px 0;
+                color: @white;
+            }
+            div{
+                padding: 5px 5px 5px 0;
+                color: lightgray;
+            }
+        }
+    }
     .footer_logOut{
         text-align: center;
+        display: flex;
+        flex-direction: column;
         padding: 10px;
+        margin-bottom: 0;
+        padding-bottom: 5px;
         &-Out{
             font-size: 1.4rem;
+            align-self: center;
+            text-align: center;
             p{
                 margin: 20px;
             }
@@ -391,10 +842,83 @@ body{
             justify-content: center;
             color: lightgrey;
             font-weight: 300;
+            max-width: 400px;
+            align-self: center;
+            padding: 15px 0 40px 0;
             p{
                 padding: 6px;
             }
         }
+    }
+    .footer_logOut-desktop{
+        display: none;
+        flex-direction: column;
+        color: lightgray;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        font-size: 1.3rem;
+        padding: 30px 0 20px 0;
+        background-color: @color-principal;
+        .logo{
+            margin: 10px;
+            width: 80px;
+            height: 26px;
+            display: block;
+            align-self: center;
+        }
+        .paises a:last-child{
+            border-right: transparent;
+        }
+        .paises a{
+            color: lightgray;
+            text-decoration: none;
+            border-right: 1px solid rgba(255, 255, 255, 0.669);
+            margin-right: 6px;
+            padding-right: 6px;
+        }
+        .paises a:hover{
+            text-decoration: underline;
+        }
+        div{
+            a{
+                color: lightgray;
+            }
+            a:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 375px){
+    .navbar_principal_group2-account{
+        #userName{
+            display: flex;
+        }
+    }
+}
+@media only screen and (min-width: 1024px){
+    .footer{
+        .footer_seccions{
+            display: none;
+        }
+        .footer_seccionsContainer-desktop{
+            display: flex;
+        }  
+        .footer_logOut-Out{
+            display: none;
+        }
+        .footer_logOut-desktop{
+            display: flex;
+        }
+    }
+}
+@media only screen and (min-width: 1215px){
+    .navbar{
+        display: none;
+    }
+    .navbar-desktop{
+        display: block;
     }
 }
 .inactive{

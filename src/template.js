@@ -42,3 +42,50 @@ function toggleSubMenuPrograms(){
     imgSubMenuprograms.classList.toggle('inactive')
     ActiveSubMenuPrograms.classList.toggle('inactive')
 }
+
+// Menu Account
+
+const usrMenu = document.querySelector('.navbar_principal_group2-account')
+const closeUsrMenu = document.querySelector('.navbar_principal_group2-account--Active_close')
+const usrMenuActive = document.querySelector('.navbar_principal_group2-account--Active')
+
+usrMenu.addEventListener('click', toggleMenuUsr)
+closeUsrMenu.addEventListener('click', toggleMenuUsr)
+
+function toggleMenuUsr(){
+    backGroundMenu.classList.toggle('inactive')
+    closeUsrMenu.classList.toggle('inactive')
+    usrMenuActive.classList.toggle('inactive')
+}
+
+// Toggle Menus
+
+const toggleMenuExplore = document.querySelector('.navbar_principal_group2-account--Active_header-explore')
+const toggleMenuAccount = document.querySelector('.navbar_principal_group1-menuIcon--Active_header-account')
+
+
+toggleMenuExplore.addEventListener('click', switchMenuExplore)
+toggleMenuAccount.addEventListener('click', switchMenuUsr)
+
+function switchMenuExplore(){
+    toggleMenu() 
+    toggleMenuUsr()
+}
+function switchMenuUsr(){
+    toggleMenuUsr()
+    toggleMenu()
+}
+
+// Location Menu
+
+const locationMenu = document.querySelector('.navbar_address')
+const locationMenuActive = document.querySelector('.navbar_address-Active')
+const locationBackground = document.querySelector('.background-menu-location')
+
+locationMenu.addEventListener('click', menuLocation)
+locationBackground.addEventListener('click', menuLocation)
+
+function menuLocation(){
+    locationBackground.classList.toggle('inactive')
+    locationMenuActive.classList.toggle('inactive')
+}
