@@ -38,6 +38,14 @@ a {
   z-index: 1;
   position: fixed;
 }
+.background-menu-accountList_desktop {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.6;
+  z-index: 1;
+  position: fixed;
+}
 .navbar {
   background-color: #232f3e;
   color: #fff;
@@ -915,6 +923,88 @@ a {
   margin-left: 5px;
   margin-top: 2px;
   opacity: 0.7;
+}
+.navbar-desktop_principal-account--Active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  top: 60px;
+  right: 100px;
+  background-color: #fff;
+  color: black;
+  z-index: 2;
+}
+.navbar-desktop_principal-account--Active > img {
+  position: absolute;
+  right: 163px;
+  top: -15px;
+}
+.navbar-desktop_principal-account--Active > div {
+  margin: 20px;
+}
+.navbar-desktop_principal-account--Active > div > h4 {
+  padding: 10px 10px 10px 0;
+  font-size: 1.4rem;
+}
+.navbar-desktop_principal-account--Active > div > div {
+  font-size: 1.2rem;
+}
+.navbar-desktop_principal-account--Active > div > p {
+  font-size: 1.2rem;
+}
+.navbar-desktop_principal-account--Active .comprarDeNuevo {
+  border-right: 1px solid lightgray;
+  padding-right: 20px;
+}
+.navbar-desktop_principal-account--Active .comprarDeNuevo h4 {
+  padding: 10px 10px 0 0;
+}
+.navbar-desktop_principal-account--Active .comprarDeNuevo .admin {
+  color: lightseagreen;
+}
+.navbar-desktop_principal-account--Active .comprarDeNuevo .producto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+}
+.navbar-desktop_principal-account--Active .comprarDeNuevo .producto img {
+  width: 50px;
+  height: 50px;
+}
+.navbar-desktop_principal-account--Active .comprarDeNuevo .producto .info {
+  color: lightskyblue;
+  padding-left: 10px;
+}
+.navbar-desktop_principal-account--Active .comprarDeNuevo .producto .info .precio {
+  color: red;
+}
+.navbar-desktop_principal-account--Active .comprarDeNuevo .producto .info button {
+  margin-top: 10px;
+  border: none;
+  background-color: #febd68;
+  padding: 5px;
+  border-radius: 5px;
+}
+.navbar-desktop_principal-account--Active .listas {
+  border-right: 1px solid lightgray;
+  padding-right: 20px;
+  margin-left: 0;
+}
+.navbar-desktop_principal-account--Active .listas .p1 {
+  padding: 5px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid lightgray;
+  font-weight: 300;
+}
+.navbar-desktop_principal-account--Active .listas .p2 p {
+  margin: 5px;
+  font-weight: 300;
+}
+.navbar-desktop_principal-account--Active .miCuenta p {
+  margin: 5px;
+  font-weight: 300;
 }
 .navbar-desktop_principal-orders {
   font-size: 1.3rem;

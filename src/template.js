@@ -103,3 +103,24 @@ function showLocationMenu(){
     closeLocationMenuDesktop.classList.toggle("inactive")
     locationMenuDesktop.classList.toggle("inactive")
 }
+
+// Account & List Menu Desktop
+
+const accountMenuDesktop = document.querySelector('.navbar-desktop_principal-account--Active')
+const openaccountMenuDesktop = document.querySelector('.navbar-desktop_principal-account')
+const closeaccountMenuDesktop = document.querySelector('.background-menu-accountList_desktop')
+
+openaccountMenuDesktop.addEventListener("click", showAccountMenu)
+closeaccountMenuDesktop.addEventListener("click", showAccountMenu)
+
+function showAccountMenu(){
+    closeaccountMenuDesktop.classList.toggle("inactive")
+    accountMenuDesktop.classList.toggle("inactive")
+}
+
+
+
+
+
+
+
