@@ -13,6 +13,7 @@ html(lang="en")
     body 
         .background-menu.inactive
         .background-menu-location.inactive
+        .background-menu-location_desktop.inactive
         header 
             .navbar
                 .navbar_principal
@@ -236,7 +237,36 @@ html(lang="en")
                         img(src="./img/icons/locationWhite.png", alt="")
                         div 
                             p Enviar a
-                            p Ciudad de 
+                            p Ciudad de
+
+
+                    .navbar-desktop_principal-address--Active.inactive
+                        .title-address Elige tu ubicacion 
+                        section
+                            .info-address Las opciones y velocidades de envio pueden variar segun la direccion.
+                            .container-address 
+                                .card 
+                                    h4 UserName 
+                                    p Domicilio, CP, Colonia, Pais.
+                                    .pre Direccion Predeterminada 
+                                .card 
+                                    h4 UserName 
+                                    p Domicilio, CP, Colonia, Pais. 
+                                .card 
+                                    h4 UserName 
+                                    p Domicilio, CP, Colonia, Pais. 
+                            .config Modificar Direcciones de envío
+                            .form-address 
+                                .introduce-address 
+                                    .lines 
+                                        .line 
+                                        .line 
+                                    .text  o introduce un código postal en México
+                                .input-address 
+                                    input(type="text")
+                                    button Confirmar
+
+
                     .navbar-desktop_principal-search
                         input(type="text" placeholder="Buscar en Amazon.com.mx")
                         img(src="./img/icons/search.png", alt="")

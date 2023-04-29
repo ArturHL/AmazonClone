@@ -89,3 +89,17 @@ function menuLocation(){
     locationBackground.classList.toggle('inactive')
     locationMenuActive.classList.toggle('inactive')
 }
+
+// Location Menu Desktop
+
+const locationMenuDesktop = document.querySelector('.navbar-desktop_principal-address--Active')
+const openLocationMenuDesktop = document.querySelector('.navbar-desktop_principal-address')
+const closeLocationMenuDesktop = document.querySelector('.background-menu-location_desktop')
+
+openLocationMenuDesktop.addEventListener("click", showLocationMenu)
+closeLocationMenuDesktop.addEventListener("click", showLocationMenu)
+
+function showLocationMenu(){
+    closeLocationMenuDesktop.classList.toggle("inactive")
+    locationMenuDesktop.classList.toggle("inactive")
+}
