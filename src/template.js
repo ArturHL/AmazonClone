@@ -117,8 +117,20 @@ function showAccountMenu(){
     closeaccountMenuDesktop.classList.toggle("inactive")
     accountMenuDesktop.classList.toggle("inactive")
 }
+ 
+// Menu Desktop ALL
 
+const menuALL = document.querySelector('.navbar-desktop_menu-btnAll--Active')
+const btnMenuALL = document.querySelector('.navbar-desktop_menu-btnAll')
+const backMenuALL = document.querySelector('.background-menu-menuALL_desktop')
 
+btnMenuALL.addEventListener('click', ShowMenuALL)
+backMenuALL.addEventListener('click', ShowMenuALL)
+
+function ShowMenuALL(){
+    menuALL.classList.toggle('inactive')
+    backMenuALL.classList.toggle('inactive')
+}
 
 
 

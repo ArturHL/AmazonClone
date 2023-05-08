@@ -15,6 +15,7 @@ html(lang="en")
         .background-menu-location.inactive
         .background-menu-location_desktop.inactive
         .background-menu-accountList_desktop.inactive
+        .background-menu-menuALL_desktop.inactive
         header 
             .navbar
                 .navbar_principal
@@ -239,8 +240,6 @@ html(lang="en")
                         div 
                             p Enviar a
                             p Ciudad de
-
-
                     .navbar-desktop_principal-address--Active.inactive
                         .title-address Elige tu ubicacion 
                         section
@@ -266,8 +265,6 @@ html(lang="en")
                                 .input-address 
                                     input(type="text")
                                     button Confirmar
-
-
                     .navbar-desktop_principal-search
                         input(type="text" placeholder="Buscar en Amazon.com.mx")
                         img(src="./img/icons/search.png", alt="")
@@ -276,9 +273,6 @@ html(lang="en")
                         div
                             p Cuenta y Lista
                             img(src="./img/icons/arrow-downWhite.png", alt="")
-                    
-                    
-                    
                     .navbar-desktop_principal-account--Active.inactive
                         img(src="./img/icons/upArrowWhite.png", alt="")
                         .comprarDeNuevo
@@ -320,9 +314,71 @@ html(lang="en")
                         img(src="./img/icons/cartWhite.png", alt="")
                         p Carrito 
                 .navbar-desktop_menu 
+
                     .navbar-desktop_menu-btnAll 
                         img(src="./img/icons/menuHamWhite.png", alt="")
                         p Todo 
+
+                    .navbar-desktop_menu-btnAll--Active.inactive 
+                        .title
+                            img(src="#", alt="")
+                            span Hola, ${User}
+                        .section 
+                            .subtitle Tendencias 
+                            p Los más vendidos 
+                            p Lo nuevo 
+                            p Productos del momento
+                        .section 
+                            .subtitle Contenido Y Dispositivos Digitales
+                            p Amazon Prime Video 
+                                span 
+                                    img(src="#", alt="")
+                            p Echo y Alexa
+                                span 
+                                    img(src="#", alt="")
+                            p Amazon Music
+                                span 
+                                    img(src="#", alt="") 
+                            p Amazon Fire TV 
+                                span 
+                                    img(src="#", alt="")
+                            p E-readers y eBooks Kindle
+                                span 
+                                    img(src="#", alt="")
+                        .section 
+                            .subtitle Buscar Por Categoría
+                            p Alimentos y Bebidas 
+                                span 
+                                    img(src="#", alt="")
+                            p Libros
+                                span 
+                                    img(src="#", alt="")
+                            p Películas, Series de TV y Música
+                                span 
+                                    img(src="#", alt="") 
+                            p Electronicos 
+                                span 
+                                    img(src="#", alt="")
+                            p.more Ver Todo
+                                span 
+                                    img(src="#", alt="") 
+                        .section 
+                            .subtitle Programas Y Características 
+                            p Prime 
+                            p Ofetas del Día 
+                            p Amazon Outlet 
+                            p Cupones 
+                            p Vender en Amazon 
+                            p Planea y Ahorra 
+                            p Compra por Edad 
+                            p Mesas de Regalos
+                        .section 
+                            .subtitle Ayuda Y Configuracion
+                            p Mi Cuenta 
+                            p Ayuda 
+                            p Salir 
+
+
                     .navbar-desktop_menu-sections 
                         a(href="#") Vender 
                         .prime

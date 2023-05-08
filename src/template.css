@@ -46,6 +46,14 @@ a {
   z-index: 1;
   position: fixed;
 }
+.background-menu-menuALL_desktop {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.6;
+  z-index: 1;
+  position: fixed;
+}
 .navbar {
   background-color: #232f3e;
   color: #fff;
@@ -1089,6 +1097,37 @@ a {
   width: 20px;
   height: 20px;
   margin: 5px;
+}
+.navbar-desktop_menu-btnAll--Active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  color: black;
+  height: 100%;
+  overflow: auto;
+  z-index: 2;
+}
+.navbar-desktop_menu-btnAll--Active .title {
+  background-color: #232f3e;
+  color: #fff;
+  padding: 20px;
+  font-size: 1.8rem;
+}
+.navbar-desktop_menu-btnAll--Active .section {
+  padding: 30px;
+  border-bottom: 1px solid lightgray;
+}
+.navbar-desktop_menu-btnAll--Active .section div {
+  margin: 10px 0 10px 0;
+}
+.navbar-desktop_menu-btnAll--Active .section p {
+  margin: 10px 0 10px 0;
+  font-weight: 300;
+}
+.navbar-desktop_menu-btnAll--Active .section .subtitle {
+  font-weight: 700;
+  font-size: 1.8rem;
 }
 .navbar-desktop_menu-btnAll:hover {
   border-radius: 5px;
